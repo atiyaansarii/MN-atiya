@@ -1,3 +1,13 @@
 https://modernnetworking.vercel.app/
 
 geocities.ws/lastr
+
+
+sh ip interface brief
+sh ip route
+sh track
+sh ip sla statistics (prac1)
+ping
+sh running-config
+sh cdp neighbors
+
