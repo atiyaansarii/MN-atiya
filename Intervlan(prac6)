@@ -1,0 +1,57 @@
+Inter vlan
+
+Take 2 Pc
+1 Multi layer switch - 3560
+
+Step1
+Pc - 0
+Ip address 193.168.1.2
+Subnet mask 255...
+Dg - 192.168.1.1
+
+Pc - 1
+Ip address 193.168.2.2
+Subnet mask 255...
+Dg - 192.168.2.1
+
+Switch 
+Enable 
+Conf t
+Vlan 10
+Name smile
+Exit
+Vlan 20
+Name cisco
+Exit
+Interface fast Ethernet 0/1 
+Switchport mode access 
+Switchport access vlan10
+Exit
+Interface fast Ethernet 0/2
+Switchport mode access 
+Switchport access vlan20
+Exit
+
+Interface vlan10
+
+Ip address 192.168.1.1 255.255.255.0
+No shutdown 
+Exit
+
+Interface vlan20 
+
+Ip address 192.168.2.1 255.255.255.0
+No shutdown 
+Exit
+Exit
+
+Conf t
+Ip routing
+Exit
+
+
+Show ip interface brief
+ To show results 
+Pc0 - ping 192.168.2.2
+
+Pc1 - ping 192.168.1.1
